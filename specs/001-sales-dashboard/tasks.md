@@ -76,10 +76,10 @@ an executive meeting.
 
 ### Implementation for User Story 1
 
-- [ ] T007 [US1] In `app.py`, compute KPI scalars from the clean `df`:
+- [x] T007 [US1] In `app.py`, compute KPI scalars from the clean `df`:
   `total_sales = df['total_amount'].sum()` and
   `total_orders = df['order_id'].count()`
-- [ ] T008 [US1] In `app.py`, render KPI cards using `st.metric()` in a
+- [x] T008 [US1] In `app.py`, render KPI cards using `st.metric()` in a
   two-column layout: left column shows "Total Sales" formatted as
   `f"${total_sales:,.2f}"`, right column shows "Total Orders" formatted as
   `f"{total_orders:,}"`
