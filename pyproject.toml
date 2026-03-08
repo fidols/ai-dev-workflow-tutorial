@@ -1,0 +1,10 @@
+[project]
+name = "shopsmart-sales-dashboard"
+version = "0.1.0"
+description = "ShopSmart e-commerce sales analytics dashboard"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "plotly",
+]
