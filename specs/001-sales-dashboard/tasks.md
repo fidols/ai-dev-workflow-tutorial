@@ -99,14 +99,14 @@ hovering any point shows the exact daily sales total.
 
 ### Implementation for User Story 2
 
-- [ ] T009 [US2] In `app.py`, compute the time series aggregation:
+- [x] T009 [US2] In `app.py`, compute the time series aggregation:
   `time_series = df.groupby('date')['total_amount'].sum().reset_index()`,
   rename columns to `['date', 'sales']`
-- [ ] T010 [US2] In `app.py`, render the trend chart using
+- [x] T010 [US2] In `app.py`, render the trend chart using
   `plotly.express.line(time_series, x='date', y='sales',
   title='Sales Trend Over Time', labels={'sales': 'Sales ($)', 'date': 'Date'})`;
   display via `st.plotly_chart(fig, use_container_width=True)`
-- [ ] T011 [US2] Verify hover tooltips on the line chart show exact `sales`
+- [x] T011 [US2] Verify hover tooltips on the line chart show exact `sales`
   values (Plotly shows tooltips by default; confirm no custom `hovertemplate`
   suppresses them)
 

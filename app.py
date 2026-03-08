@@ -1,4 +1,5 @@
 import pandas as pd
+import plotly.express as px
 import streamlit as st
 
 st.set_page_config(page_title="ShopSmart Sales Dashboard", layout="wide")
@@ -30,3 +31,18 @@ total_orders = df["order_id"].count()
 col1, col2 = st.columns(2)
 col1.metric("Total Sales", f"${total_sales:,.2f}")
 col2.metric("Total Orders", f"{total_orders:,}")
+
+# T009: Compute time series aggregation
+time_series = df.groupby("date")["total_amount"].sum().reset_index()
+time_series.columns = ["date", "sales"]
+
+# T010: Render sales trend line chart with interactive tooltips
+fig_trend = px.line(
+    time_series,
+    x="date",
+    y="sales",
+    title="Sales Trend Over Time",
+    labels={"sales": "Sales ($)", "date": "Date"},
+)
+st.plotly_chart(fig_trend, use_container_width=True)
+# T011: Plotly shows tooltips by default — no custom hovertemplate suppressing them
