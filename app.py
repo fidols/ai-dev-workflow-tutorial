@@ -46,3 +46,41 @@ fig_trend = px.line(
 )
 st.plotly_chart(fig_trend, use_container_width=True)
 # T011: Plotly shows tooltips by default — no custom hovertemplate suppressing them
+
+# T012: Compute category aggregation sorted descending
+by_category = (
+    df.groupby("category")["total_amount"]
+    .sum()
+    .reset_index()
+    .sort_values("total_amount", ascending=False)
+)
+by_category.columns = ["category", "sales"]
+
+# T013: Render category bar chart with interactive tooltips
+fig_category = px.bar(
+    by_category,
+    x="category",
+    y="sales",
+    title="Sales by Category",
+    labels={"sales": "Sales ($)", "category": "Category"},
+)
+st.plotly_chart(fig_category, use_container_width=True)
+
+# T014: Compute region aggregation sorted descending
+by_region = (
+    df.groupby("region")["total_amount"]
+    .sum()
+    .reset_index()
+    .sort_values("total_amount", ascending=False)
+)
+by_region.columns = ["region", "sales"]
+
+# T015: Render region bar chart with interactive tooltips
+fig_region = px.bar(
+    by_region,
+    x="region",
+    y="sales",
+    title="Sales by Region",
+    labels={"sales": "Sales ($)", "region": "Region"},
+)
+st.plotly_chart(fig_region, use_container_width=True)

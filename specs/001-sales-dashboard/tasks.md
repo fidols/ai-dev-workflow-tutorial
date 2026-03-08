@@ -126,19 +126,19 @@ group sums from the quickstart script.
 
 ### Implementation for User Story 3
 
-- [ ] T012 [US3] In `app.py`, compute category aggregation:
+- [x] T012 [US3] In `app.py`, compute category aggregation:
   `by_category = df.groupby('category')['total_amount'].sum().reset_index()
   .sort_values('total_amount', ascending=False)`;
   rename columns to `['category', 'sales']`
-- [ ] T013 [US3] In `app.py`, render category bar chart using
+- [x] T013 [US3] In `app.py`, render category bar chart using
   `plotly.express.bar(by_category, x='category', y='sales',
   title='Sales by Category', labels={'sales': 'Sales ($)', 'category': 'Category'})`;
   display via `st.plotly_chart(fig, use_container_width=True)`
-- [ ] T014 [US3] In `app.py`, compute region aggregation:
+- [x] T014 [US3] In `app.py`, compute region aggregation:
   `by_region = df.groupby('region')['total_amount'].sum().reset_index()
   .sort_values('total_amount', ascending=False)`;
   rename columns to `['region', 'sales']`
-- [ ] T015 [US3] In `app.py`, render region bar chart using
+- [x] T015 [US3] In `app.py`, render region bar chart using
   `plotly.express.bar(by_region, x='region', y='sales',
   title='Sales by Region', labels={'sales': 'Sales ($)', 'region': 'Region'})`;
   display via `st.plotly_chart(fig, use_container_width=True)`
