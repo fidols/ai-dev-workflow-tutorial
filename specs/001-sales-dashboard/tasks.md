@@ -153,7 +153,7 @@ groups represented. Hover tooltips match group sums from quickstart script
 
 **Purpose**: End-to-end validation and deployment
 
-- [ ] T016 Run the full quickstart.md validation checklist against the
+- [x] T016 Run the full quickstart.md validation checklist against the
   running app: SC-001 (5-second load), SC-002 (data accuracy), SC-003
   (60-second user test), FR-004/FR-007 (tooltips), FR-009 (error state),
   SC-004 (no warnings)
