@@ -51,11 +51,11 @@ depend on. No user story work can begin until this phase is complete.
 
 **⚠️ CRITICAL**: Phases 3, 4, and 5 are blocked until T005 and T006 are complete.
 
-- [ ] T005 In `app.py`, implement CSV loading: read `data/sales-data.csv` using
+- [x] T005 In `app.py`, implement CSV loading: read `data/sales-data.csv` using
   `pandas.read_csv()` with `parse_dates=['date']`; wrap in a `try/except` block
   that calls `st.error()` with a human-readable message and `st.stop()` if the
   file is missing or unparseable — no stack trace shown to the user
-- [ ] T006 In `app.py`, after loading, identify rows where `total_amount` is
+- [x] T006 In `app.py`, after loading, identify rows where `total_amount` is
   null or non-numeric; exclude them from a clean `df` variable; if any rows were
   excluded, display `st.info("N rows skipped due to missing or invalid
   total_amount.")` where N is the count of excluded rows
